@@ -1,0 +1,1 @@
+python Nundergraduate.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home Nundergraduate.json C10 C20 C30 N00 N01F N01G N11 N12 N46 N79

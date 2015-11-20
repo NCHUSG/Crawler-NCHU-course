@@ -1,0 +1,1 @@
+python D:\xampp\htdocs\university_course_parser\subjects\nchu\required.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home test.json C10 C20 C30 U11 U12 U13 U21 U23 U24 U28 U29 U30F U30G U30H U31 U32 U33A U33B U34 U35 U36 U37 U38B U38A U39 U40 U42 U43 U44 U51 U52 U53B U53A U54A U54B U56 U61B U61A U62A U62B U63 U64A U64B U65 U66
