@@ -16,7 +16,7 @@ try:
 		with open(fname, 'w', encoding='UTF-8') as f:
 			f.write(re.text)
 
-	print('requests success!!')
+	#print('requests success!!')
 except Exception as e:
 	print('requests fail!!')
 	print(e)
