@@ -1,7 +1,7 @@
 import requests, json, os
 
 try:
-    os.chdir('json')
+    os.chdir('/var/www/html/Python-Crawler/nchu/json')
     #means cd path
 except:
     print('path error, the file will be dump into the current directory')
