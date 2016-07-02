@@ -1,5 +1,4 @@
-# coding=utf-8
-
+#!/usr/bin/env python3
 import json,re,sys,pyprind,requests,urllib,traceback
 from pyquery import PyQuery as pq
 
@@ -122,40 +121,6 @@ def parse(data):#會傳入一門課程的dict
                 
     return r_data
 
-def to_json(json_path,arr,notFirst = False):
-    # print(arr)
-    with open(json_path, 'a', encoding='UTF-8') as json_file:
-        #with 述句執行完畢後會自動關檔，後面的as 則是把開檔完的reference指派給as 後的變數
-        #as裡面的名稱在外部是看不到的，是區域變數
-        for d in arr:
-            json_str = json.dumps(d, ensure_ascii=False, sort_keys=True)
-            #在這裡使用到json的module,dump是轉存，將python的物件型態轉成json的物件型態
-            #因為json是js的型態；ensure_ascii若為true(預設)
-            #就會確保所有輸入的字元都是ascii，若非則跳過那個字元
-            #設為false就會照原樣輸出
-            #sort_keys預設為false，功用為把key做排序
-            json_file.write('{}{}'.format((',' if notFirst else ''), json_str))
-            #str.format()這個函式，會在{}裡面填入字串，{}裡面可以放index或key名稱
-            notFirst = True
-
-def start_json_arr(json_path,name,notFirst = False):
-    with open(json_path, 'a' ,encoding='UTF-8') as json_file:        
-        json_file.write('%s"%s":[' % ((',' if notFirst else ''), name))
-
-def end_json_arr(json_path):
-    with open(json_path, 'a' ,encoding='UTF-8') as json_file:
-        json_file.write(']')
-
-def start_json(json_path):
-    with open(json_path, 'w' ,encoding='UTF-8') as json_file:
-        json_file.truncate()#如果沒有傳入參數的話，就會本全文清空
-        #若傳入整數n的話，是指把n位置以後的文字都刪掉
-        json_file.write('{')#單純只是寫入而已
-
-def end_json(json_path):
-    with open(json_path, 'a' ,encoding='UTF-8') as json_file:
-        json_file.write('}')
-
 if __name__ == "__main__":
     if len(sys.argv) < 3:
         #sys.argv[0]是模組名稱喔!
@@ -174,8 +139,6 @@ if __name__ == "__main__":
     #建立一個進度條物件
     notFirst1 = False
     try:
-        start_json(jpath)
-        start_json_arr(jpath,"course",notFirst1)
         notFirst1 = True
         notFirst2 = False
 
@@ -193,13 +156,12 @@ if __name__ == "__main__":
                     #append裡面放的是一個list，用，格該並不是額外的參數
                     #就單單只是list裡面有兩個物件，最後格式就會變成課程資料+'，'+error
             # print(data)
-            to_json(jpath,data,notFirst2)
+            with open('jjjj.json', 'w', encoding='UTF-8') as f:
+                json.dump({'course':data}, f)
             notFirst2 = True
             my_prbar.update(1,item_id = ID)#item_id可以讓使用者追蹤到底執行到第幾個ID
             #ID通常是放for loop裏面的變數，update()會讓進度條更新
 
-        end_json_arr(jpath)
-        end_json(jpath)
     except Exception as e:
         print("================ ERR ================")
         print(e)
