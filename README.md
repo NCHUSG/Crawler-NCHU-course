@@ -73,6 +73,6 @@
     
 預設會將json存在這個路徑底下:
 
-    `os.chdir('/var/www/html/Python-Crawler/nchu/json')`
+    os.chdir('/var/www/html/Python-Crawler/nchu/json')
 
 若沒有這個資料夾會產生exception  併直接將json儲存在當前目底下
