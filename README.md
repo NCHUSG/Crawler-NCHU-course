@@ -62,7 +62,7 @@
     python3 CoursePickingHelperCrawler.py
 
 ### 資料來源
-    #### 感謝中興大學計資中心提供
+#### 感謝中興大學計資中心提供
     * [學士班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=U)
     * [通識加體育課](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=O)
     * [進修部](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=N)
@@ -72,6 +72,6 @@
 
 ### 範例
     
-    預設會將json存在這個路徑底下:
+預設會將json存在這個路徑底下:
     `os.chdir('/var/www/html/Python-Crawler/nchu/json')`
-    若沒有這個資料夾會產生exception  併直接將json儲存在當前目底下
+若沒有這個資料夾會產生exception  併直接將json儲存在當前目底下
