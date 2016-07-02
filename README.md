@@ -1,4 +1,4 @@
-# ptt-web-crawler (PTT 網路版爬蟲) [![Build Status](https://travis-ci.org/jwlin/ptt-web-crawler.svg?branch=master)](https://travis-ci.org/jwlin/ptt-web-crawler)
+# NCHU-python-Crawler (中興大學課程爬蟲) [![Build Status](https://travis-ci.org/jwlin/ptt-web-crawler.svg?branch=master)](https://travis-ci.org/jwlin/ptt-web-crawler)
 
 ### 功能簡介
 
@@ -61,17 +61,18 @@
 ### 執行方式
     python3 CoursePickingHelperCrawler.py
 
-### 資料來源
-#### 感謝中興大學計資中心提供
-    * [學士班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=U)
-    * [通識加體育課](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=O)
-    * [進修部](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=N)
-    * [在職專班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=W)
-    * [碩班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=G)
-    * [博士班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=D)
+### 資料來源 : ##### 感謝中興大學計資中心提供
+* [學士班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=U)
+* [通識加體育課](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=O)
+* [進修部](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=N)
+* [在職專班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=W)
+* [碩班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=G)
+* [博士班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=D)
 
 ### 範例
     
 預設會將json存在這個路徑底下:
+
     `os.chdir('/var/www/html/Python-Crawler/nchu/json')`
+
 若沒有這個資料夾會產生exception  併直接將json儲存在當前目底下
