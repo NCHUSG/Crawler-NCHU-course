@@ -1,1 +1,0 @@
-python D:\xampp\htdocs\university_course_parser\subjects\nchu\PE_parser.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_all pe.json 1 7 B 4 0 H

@@ -1,1 +1,0 @@
-python D:\xampp\htdocs\university_course_parser\subjects\nchu\parser_for_general.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_gene general.json EFG 3 8

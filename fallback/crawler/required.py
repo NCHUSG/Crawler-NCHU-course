@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
     url = sys.argv[1] 
     degree = sys.argv[2]
-    jpath = sys.argv[3]           
+    jfile = sys.argv[3]           
     dept_id = sys.argv[4:]
     err = []
     print(dept_id)
@@ -156,7 +156,7 @@ if __name__ == "__main__":
                     #append裡面放的是一個list，用，格該並不是額外的參數
                     #就單單只是list裡面有兩個物件，最後格式就會變成課程資料+'，'+error
             # print(data)
-            with open('jjjj.json', 'w', encoding='UTF-8') as f:
+            with open(jfile, 'w', encoding='UTF-8') as f:
                 json.dump({'course':data}, f)
             notFirst2 = True
             my_prbar.update(1,item_id = ID)#item_id可以讓使用者追蹤到底執行到第幾個ID
