@@ -1,8 +1,6 @@
 # NCHU-python-Crawler (中興大學課程爬蟲)
 
-* 輸出中興大學課程資料, JSON 格式輸出
-* 過濾資料內空白、空行
-* 支援 Python 3.4
+由於中興大學沒有課程的 open data, 所以便製作 Python 爬蟲將教務處的課程資料轉換成 json
 
 ## Getting Started
 
@@ -25,17 +23,30 @@ pip3 install -r requirements.txt
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
+
 1. Use Crontab to make crawler automatically run in background
+
+
+
+
+
+
+
+
 
 	* `crontab -e`
 
 2. Paste the command below into the bottom of the crontab file :
 
-	* `* * * * * python3 required.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home fileName.json U [ C10 | C20 C30 U11 U12 U13 U21 U23 U24 U28 U29 U30F U30G U30H U31 U32 U33A U33B U34 U35 U36 U37 U38B U38A U39 U40 U42 U43 U44 U51 U52 U53B U53A U54A U54B U56 U61B U61A U62A U62B U63 U64A U64B U65 U66 ]`
+	* 學士班 `* * * * * python3 required.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home fileName.json U [ C10 | C20 C30 U11 U12 U13 U21 U23 U24 U28 U29 U30F U30G U30H U31 U32 U33A U33B U34 U35 U36 U37 U38B U38A U39 U40 U42 U43 U44 U51 U52 U53B U53A U54A U54B U56 U61B U61A U62A U62B U63 U64A U64B U65 U66 ]`
 
-	* 體育課 ( parse PE class )`* * * * * python3 https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home fileName.json U [ C10 | C20 C30 U11 U12 U13 U21 U23 U24 U28 U29 U30F U30G U30H U31 U32 U33A U33B U34 U35 U36 U37 U38B U38A U39 U40 U42 U43 U44 U51 U52 U53B U53A U54A U54B U56 U61B U61A U62A U62B U63 U64A U64B U65 U66 ]`
+	* 碩班 `python required.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home fileName.json B20 B60 G11 G12 G13 G14 G15 G17 G18 G19 G21 G22 G23 G24 G26 G261 G28 G29 G30F G30G G30I G31 G32 G33 G34 G35 G36 G37 G38 G39 G40 G41 G42 G43 G44 G45 G46 G47 G49 G51 G52 G53 G531 G54 G541 G55 G56 G58 G59 G61 G62 G63 G64 G65 G66 G67 G68 G81 G82 G91 G93 G94`
 
-	* 通識課 ( for General Edu class )`* * * * * python3 https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_gene fileName.json U [ C10 | C20 C30 U11 U12 U13 U21 U23 U24 U28 U29 U30F U30G U30H U31 U32 U33A U33B U34 U35 U36 U37 U38B U38A U39 U40 U42 U43 U44 U51 U52 U53B U53A U54A U54B U56 U61B U61A U62A U62B U63 U64A U64B U65 U66 ]`
+	* 夜間部 `python required.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home Nundergraduate.json N C10 C20 C30 N00 N01F N01G N11 N12 N46 N79`
+
+	* 體育課 ( parse PE class )`* * * * * python3 PE.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_all fileName.json [ 1 | 7 B 4 0 H ]`
+
+	* 通識課 ( for General Edu class )`* * * * * python3 general_EDU.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_gene fileName.json [ E | F G 3 8]`
 
 ### Result
 輸出 JSON 格式
@@ -111,7 +122,7 @@ For the versions available, see the [tags on this repository](https://github.com
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the **GNU 3.0** License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
