@@ -118,8 +118,13 @@ This project is licensed under the **GNU 3.0** License - see the [LICENSE.md](..
 
 * 感謝[Pastleo](https://github.com/chgu82837)大大開的坑，讓學弟學了不少的Python，學長們的 code 也讓我受益良多~
 
-@taichunmin
+GitHub supports many extras in Markdown that help you reference and link to people. If you ever want to direct a comment at someone, you can prefix their name with an @ symbol: Hey @kneath — love your sweater!
 
-@kneath
+But I have to admit, tasks lists are my favorite:
 
-~~test~~
+- [x] This is a complete item
+- [ ] This is an incomplete item
+
+When you include a task list in the first comment of an Issue, you will see a helpful progress bar in your list of issues. It works in Pull Requests, too!
+
+And, of course emoji! :sparkles: :camel: :boom:
