@@ -1,6 +1,7 @@
 # NCHU-python-Parser (中興大學課程爬蟲)
 
-興大的計資中心有按照我的需求產出一份**類似**json的東西  但時常會出現不合法的字元,使得整份json噴掉，且計中提供的格式是format過的，所以這個parser可以將它minify、過濾資料內空白、空行，倘若學校資料來源不幸無法運作，請使用自製的[Crawler](fallback)
+* 興大的計資中心有按照我的需求產出一份**類似**json的東西  但時常會出現不合法的字元,使得整份json噴掉，且計中提供的格式是format過的，所以這個parser可以將它minify、過濾資料內空白、空行，倘若學校資料來源不幸無法運作，請採用替代方案：
+  * 使用自製的[Crawler](fallback)
 
 
 ## Getting Started
@@ -122,4 +123,4 @@ This project is licensed under the **GNU 3.0** License - see the [LICENSE.md](LI
     * [在職專班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=W)
     * [碩班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=G)
     * [博士班](https://onepiece.nchu.edu.tw/cofsys/plsql/json_for_course?p_career=D)
-* 感謝[黃川哲](https://github.com/CJHwong)大大開的坑，讓學弟學了不少的Python，學長們的 code 也讓我受益良多~
+* 感謝[Pastleo](https://github.com/chgu82837)大大開的坑，讓學弟學了不少的Python，學長們的 code 也讓我受益良多~
