@@ -1,4 +1,4 @@
-# NCHU-python-Crawler (中興大學課程爬蟲)
+# NCHU-python-Crawler (中興大學課程爬蟲)[![Build Status](https://travis-ci.org/NCHUSG/Python-Crawler.svg?branch=master)](https://travis-ci.org/NCHUSG/Python-Crawler)
 
 由於中興大學沒有課程的 open data, 所以便製作 Python 爬蟲將教務處的課程資料轉換成 json
 
