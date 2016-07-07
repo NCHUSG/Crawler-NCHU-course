@@ -8,6 +8,7 @@ test:
 	python ./fallback/crawler/required.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_home N fileName.json C10 C20 C30 N00 N01F N01G N11 N12 N46 N79
 	python ./fallback/crawler/PE.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_all fileName.json 1 7 B 4 0 H 
 	python ./fallback/crawler/general_EDU.py https://onepiece.nchu.edu.tw/cofsys/plsql/crseqry_gene fileName.json E F G 3 8
+	python ./test.py
 
 clean:
 	rm -f *.json
